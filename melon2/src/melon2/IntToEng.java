@@ -6,11 +6,15 @@ public class IntToEng {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
-        System.out.println(translateEng(input));
+        if(input < 11) {
+        	System.out.println(translateEng1(input));
+        } else {
+        	System.out.println(translateEng2(input));
+        }
     }
 
-    // 数値を英訳する変換するメソッド
-    static String translateEng(int n) {
+    // 0~10の数値を英訳する変換するメソッド
+    static String translateEng1(int n) {
     	String output=null;
     	if(n==0) output="zero";
     	if(n==1) output="one";
@@ -24,6 +28,22 @@ public class IntToEng {
     	if(n==9) output="nine";
     	if(n==10) output="ten";
         return output;
+    }
+
+    // 11~20の数値を英訳する変換するメソッド
+    static String translateEng2(int n) {
+    	String output = null;
+    	if(n==11) output="eleven";
+    	if(n==12) output="twelve";
+    	if(n==13) output="thirteen";
+    	if(n==14) output="fourteen";
+    	if(n==15) output="fifteen";
+    	if(n==16) output="sixteen";
+    	if(n==17) output="seventeen";
+    	if(n==18) output="eighteen";
+    	if(n==19) output="nineteen";
+    	if(n==20) output="twenty";
+    	return output;
     }
 }
 
