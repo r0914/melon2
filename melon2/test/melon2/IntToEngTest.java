@@ -18,21 +18,21 @@ public class IntToEngTest {
 	public void translateEng2での値を取得できる() {
 		IntToEng ite=new IntToEng();
 		String expected="fourteen";
-		String actual=ite.translateEng1(14);
+		String actual=ite.translateEng2(14);
 		assertThat(actual,is(expected));
 	}
 
 	public void translateEng3での値を取得できる() {
 		IntToEng ite=new IntToEng();
-		String expected="twenty-five";
-		String actual=ite.translateEng1(25);
+		String expected="twenty";
+		String actual=ite.translateEng3(20);
 		assertThat(actual,is(expected));
 	}
 
 	public void translateEng4での値を取得できる() {
 		IntToEng ite=new IntToEng();
-		String expected="sixty";
-		String actual=ite.translateEng1(60);
+		String expected="one-hundred-fourteen";
+		String actual=ite.translateEng4(114);
 		assertThat(actual,is(expected));
 	}
 
