@@ -12,8 +12,7 @@ public class IntToEng {
         	System.out.println(translateEng2(input));
         }else if(input>20&&input<30){
         	System.out.println(translateEng3(input));
-        }
-        else {
+        }else {
         	System.out.println(translateEng4(input));
         }
     }
@@ -49,13 +48,38 @@ public class IntToEng {
     	if(n==19) output="nineteen";
     	return output;
     }
-    
- // 21~30の数値を英訳する変換するメソッド
+
+    // 21~30の数値を英訳する変換するメソッド
     static String translateEng3(int n) {
-    	int a=n-20;
-    	return "twenty-"+translateEng1(a);
+    	//String output=null;
+    	if(n>20&&n<30) {
+    		int a=n-20;
+    		return "twenty-"+translateEng1(a);
+    	}else if(n>30&&n<40) {
+    		int a=n-30;
+    		return "thirty-"+translateEng1(a);
+    	}else if(n>40&&n<50) {
+    		int a=n-40;
+    		return "fourty-"+translateEng1(a);
+    	}else if(n>50&&n<60) {
+    		int a=n-40;
+    		return "fifty-"+translateEng1(a);
+    	}else if(n>60&&n<70) {
+    		int a=n-40;
+    		return "sixty-"+translateEng1(a);
+    	}else if(n>70&&n<80) {
+    		int a=n-40;
+    		return "seventy-"+translateEng1(a);
+    	}else if(n>80&&n<90) {
+    		int a=n-40;
+    		return "eighty-"+translateEng1(a);
+    	}else if(n>80&&n<90) {
+    		int a=n-40;
+    		return "ninety-"+translateEng1(a);
+    	}
+    	return null;
     }
-    
+
     static String translateEng4(int n) {
     	String output=null;
     	if(n==20) output="twenty";
@@ -68,6 +92,6 @@ public class IntToEng {
     	if(n==90) output="ninety";
     	return output;
     }
-    
+
 }
 
