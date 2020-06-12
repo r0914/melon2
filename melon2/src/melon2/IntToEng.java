@@ -8,10 +8,13 @@ public class IntToEng {
         int input = sc.nextInt();
         if(input < 11) {
         	System.out.println(translateEng1(input));
-        }else if(input>11&&input<21){
+        }else if(input>11&&input<20){
         	System.out.println(translateEng2(input));
-        }else if(input>20&&input<31){
+        }else if(input>20&&input<30){
         	System.out.println(translateEng3(input));
+        }
+        else {
+        	System.out.println(translateEng4(input));
         }
     }
 
@@ -44,31 +47,26 @@ public class IntToEng {
     	if(n==17) output="seventeen";
     	if(n==18) output="eighteen";
     	if(n==19) output="nineteen";
-    	if(n==20) output="twenty";
     	return output;
     }
     
  // 21~30の数値を英訳する変換するメソッド
     static String translateEng3(int n) {
-    	String output = null;
-    	if(n<30&&n>20) {
-    		int a=n-20;
-    		if(a==0) output="zero";
-        	if(a==1) output="one";
-        	if(a==2) output="two";
-        	if(a==3) output="three";
-        	if(a==4) output="four";
-        	if(a==5) output="five";
-        	if(a==6) output="six";
-        	if(a==7) output="seven";
-        	if(a==8) output="eight";
-        	if(a==9) output="nine";
-        	if(a==10) output="ten";
-        	return "twenty-"+output;
-    }else {
-    	output="thirty";
+    	int a=n-20;
+    	return "twenty-"+translateEng1(a);
+    }
+    
+    static String translateEng4(int n) {
+    	String output=null;
+    	if(n==20) output="twenty";
+    	if(n==30) output="thirty";
+    	if(n==40) output="fourty";
+    	if(n==50) output="fifty";
+    	if(n==60) output="sixty";
+    	if(n==70) output="seventy";
+    	if(n==80) output="eighty";
+    	if(n==90) output="ninety";
     	return output;
-    	}
     }
     
 }
